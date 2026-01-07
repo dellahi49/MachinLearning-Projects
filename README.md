@@ -11,7 +11,7 @@ en suivant une **démarche méthodologique complète** allant de l’exploration
 
 ##  Algorithmes de Machine Learning utilisés
 
-|------Partie------|----------Type--------|-----Algorithme--------|
+|       Partie     |          Type        |       Algorithme      |
 |------------------|----------------------|-----------------------|
 | Partie 1         | MLS – Régression     | Régression Linéaire   |
 | Partie 2         | MLS – Classification | Régression Logistique |
@@ -23,9 +23,9 @@ en suivant une **démarche méthodologique complète** allant de l’exploration
 
 
 .
+├── README.md        # Documentation du projet
 ├── mini-projet-RLineair.ipynb  # Notebook Google Colab de  Régression Linéaire 
-├── mini-projet-Rlogistique.ipynb  # Notebook Google Colab de Régression Logistique
-└── README.md        # Documentation du projet
+└── mini-projet-Rlogistique.ipynb  # Notebook Google Colab de Régression Logistique
 ```
 
 
@@ -66,38 +66,38 @@ Ce dataset est couramment utilisé pour :
 
 ###  Étapes méthodologiques suivies
 
-#### 1 Chargement et exploration des données
+#### 1. Chargement et exploration des données
 - Lecture du dataset
 - Visualisation des premières lignes
 - Analyse des types de variables
 
-#### 2 Prétraitement des données
+#### 2. Prétraitement des données
 - Séparation des variables explicatives et de la variable cible
 - Encodage des variables catégorielles (One-Hot Encoding)
 - Vérification des valeurs manquantes
 
-#### 3 Analyse exploratoire
+#### 3. Analyse exploratoire
 - Calcul de la matrice de corrélation
 - Visualisation via une **Heatmap**
 - Analyse des relations entre variables
 
-#### 4 Modélisation mathématique
+#### 4. Modélisation mathématique
 Le modèle de régression linéaire est défini par :
 
 \[
 y = \beta_0 + \sum_{i=1}^{n} \beta_i x_i + \varepsilon
 \]
 
-#### 5 Entraînement du modèle
+#### 5. Entraînement du modèle
 - Séparation des données en ensembles d’entraînement et de test
 - Utilisation de **LinearRegression** (scikit-learn)
 
-#### 6 Évaluation des performances
+#### 6. Évaluation des performances
 Les performances sont évaluées à l’aide de :
 - **Mean Squared Error (MSE)**
 - **Coefficient de détermination (R²)**
 
-#### 7 Interprétation des résultats
+#### 7. Interprétation des résultats
 - Analyse de l’influence de chaque variable explicative
 - Identification des facteurs ayant le plus d’impact sur les coûts médicaux
 
@@ -134,23 +134,23 @@ La variable cible originale comporte 3 classes. Elle est transformée en une **v
 
 ##  Étapes méthodologiques suivies
 
-### 1 Préparation des données
+### 1. Préparation des données
 
 * Chargement du dataset Iris depuis `sklearn.datasets`
 * Conversion en DataFrame pour faciliter la manipulation
 * Transformation de la variable cible en classification binaire
 
-### 2 Séparation des données
+### 2. Séparation des données
 
 * Division en **jeu d’entraînement (80%)** et **jeu de test (20%)**
 * Objectif : entraîner le modèle sur une partie des données et évaluer sa performance sur des données jamais vues
 
-### 3 Normalisation
+### 3. Normalisation
 
 * Application de la **standardisation** (moyenne = 0, écart-type = 1)
 * Permet d’améliorer la convergence et la performance du modèle de régression logistique
 
-### 4 Modélisation : Régression Logistique
+### 4. Modélisation : Régression Logistique
 
 La régression logistique estime la probabilité :
 
@@ -166,13 +166,13 @@ avec :
 
 La fonction **sigmoïde** transforme la sortie en une probabilité comprise entre 0 et 1.
 
-### 5 Prédiction
+### 5. Prédiction
 
 * Le modèle prédit la classe (0 ou 1) pour chaque observation du jeu de test
 
-### 6 Évaluation du modèle
+### 6. Évaluation du modèle
 
-#### 7 Matrice de confusion
+#### 7. Matrice de confusion
 
 La matrice de confusion permet d’analyser les erreurs de classification :
 
@@ -186,7 +186,7 @@ La matrice de confusion permet d’analyser les erreurs de classification :
 * **FP (False Positives)** : Autres classes prédites à tort comme Setosa
 * **FN (False Negatives)** : Setosa non détectées
 
-#### 8 Métriques
+#### 8. Métriques
 
 * **Accuracy (Exactitude)**
   [ Accuracy = \frac{TP + TN}{TP + TN + FP + FN} ]
